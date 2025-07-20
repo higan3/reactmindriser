@@ -1,13 +1,14 @@
+import { NavLink } from "react-router";
+
 export default function Header() {
   return (
-    <div className="bg-[#F44336] sticky top-0 text-white py-2 shadow-lg">
-      <div className="space-x-5">
-        <a href="" className="bg-white text-black px-5 py-[10px]">
-          Home
-        </a>
-        <a href="">Link1</a>
-        <a href="">Link2</a>
-      </div>
+    <div className="bg-black text-white p-3 flex items-baseline justify-between">
+      <h1 className="text-2xl">React Router</h1>
+
+      <nav className="space-x-7">
+        <NavLink to={"/about"}>About</NavLink>
+        <NavLink to={"/contact"}>Contact</NavLink>
+      </nav>
     </div>
   );
 }
